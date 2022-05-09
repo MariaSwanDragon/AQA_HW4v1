@@ -17,8 +17,6 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
-//    testImplementation 'org.seleniumhq.selenium:selenium-java:4.1.4'
-    testImplementation"io.github.bonigarcia:webdrivermanager:5.1.1"
     testImplementation 'com.codeborne:selenide:6.4.0'
 }
 
@@ -26,6 +24,4 @@ test {
     useJUnitPlatform()
     // в тестах, вызывая `gradlew test -Dselenide.headless=true` будем передавать этот параметр в JVM (где его подтянет Selenide)
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
-
-
 }
